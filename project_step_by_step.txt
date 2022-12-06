@@ -1,0 +1,47 @@
+Create script for ML in Loan_Eligibility_Exploration.ipynb
+
+For Python script, create Virtual Environment : project7
+
+Install FastAPI : 
+    $ pip install "fastapi[all]"
+
+Open postman to test API --> Create New Collections: Project ML
+
+Create python file main.py
+
+API Route connection: $ uvicorn main:app --reload
+
+For API Connection testing:
+    Add New Request: Home 
+    With method GET --> Enter request URL http://127.0.0.1:8000/
+
+
+For Logistic Regression:
+    Add New Request: Predict_LR
+    With method POST --> Enter request URL http://127.0.0.1:8000/predict_lr
+    Body --> Raw --> JSON --> input data for modeling
+    Click SEND to get the prediction
+        
+    
+For Random Forest    
+    Add New Request: Predict_RF
+    With method POST --> Enter request URL http://127.0.0.1:8000/predict_rf
+    Body --> Raw --> JSON --> input data for modeling
+    Click SEND to get the prediction
+
+
+
+Input format:
+{
+    "Gender": "Male",
+    "Married": "Yes",
+    "Dependents": "1",
+    "Education": "Graduate",
+    "Self_Employed": "No",
+    "ApplicantIncome": 3000,
+    "CoapplicantIncome": 1000.0,
+    "LoanAmount": 200.0,
+    "Loan_Amount_Term": 50.0,
+    "Credit_History": 1.0,
+    "Property_Area": "Urban"
+}
